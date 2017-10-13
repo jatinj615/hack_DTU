@@ -15,11 +15,22 @@
                     @endif
 
                     You are logged in!
+                    <div id="map" style="height:500px;width:400px;margin:0">
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script type="text/javascript" src="{{ asset('/js/map.js') }}">
-</script>
+   <script>
+     function initMap() {
+       // Create a map object and specify the DOM element for display.
+       var map = new google.maps.Map(document.getElementById('map'), {
+         center: {lat: -34.397, lng: 150.644},
+         zoom: 8
+       });
+     }
+
+   </script>
 @endsection
