@@ -16,6 +16,7 @@ class CreateVehiclesTable extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
+            $table->string('adhaar');
             $table->string('rc');
             $table->string('vehichle_no');
             $table->timestamps();

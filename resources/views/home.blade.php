@@ -23,14 +23,40 @@
         </div>
     </div>
 </div>
-   <script>
-     function initMap() {
-       // Create a map object and specify the DOM element for display.
-       var map = new google.maps.Map(document.getElementById('map'), {
-         center: {lat: -34.397, lng: 150.644},
-         zoom: 8
-       });
-     }
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+  function initMap() {
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(success, fail);
 
+    function success(position){
+      console.log(position);
+      var latval = position.coords.latitude;
+      var lngval = position.coords.longitude;
+      getMap(latval,lngval);
+
+    }
+
+    function getMap(latval,lngval){
+       console.log("hello");
+       console.log(latval);
+       console.log(lngval);
+        var mark = {lat: latval, lng: lngval};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: mark,
+          zoom: 12
+        });
+        var marker = new google.maps.Marker({
+             position: mark,
+             map: map
+           });
+      }
+    function fail(){
+      alert("fails");
+    }
+    }else{
+      alert("Browser Not Supported");
+    }
+  }
    </script>
 @endsection

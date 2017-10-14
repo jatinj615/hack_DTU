@@ -1,95 +1,111 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>hackDtu</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-        <title>Laravel</title>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+.mt-100 {
+margin-top: 100px;
+}
+.mb-100 {
+margin-bottom: 100px;
+}
 
-            .full-height {
-                height: 100vh;
-            }
+.icon {
+width: 32px;
+height: 32px;
+text-align: center;
+padding: 7px 8px;
+border: 2px solid;
+border-radius: 50%;
+}
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+.header {
+padding-top: 50px;
+background-color: #eee;
+overflow: hidden;
+}
+.footer {
+color: #887;
+background-color: #eee;
+padding-top: 30px;
+padding-bottom: 30px;
+}
 
-            .position-ref {
-                position: relative;
-            }
+.content {
+position: relative;
+display: table;
+width: 100%;
+min-height: 100vh;
+}
+.pull-middle {
+display: table-cell;
+vertical-align: middle;
+}
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+.btn {
+padding-left: 25px;
+padding-right: 25px;
+}
+.btn-circle {
+border-radius: 20px;
+}
 
-            .content {
-                text-align: center;
-            }
+.input-group input {
+border: 0;
+box-shadow: none;
+padding-right: 30px;
+}
+.input-group input:focus,
+.input-group input:active {
+outline: 0;
+box-shadow: none;
+}
+.input-group-btn:last-child>.btn {
+z-index: 2;
+margin-left: -18px;
+border-radius: 20px;
+}
 
-            .title {
-                font-size: 84px;
-            }
+.phone {
+position: relative;
+max-width: 263px;
+margin: 0 auto;
+padding: 65px 15px 55px;
+border: 2px solid #ddd;
+border-radius: 20px;
+background-color: #222;
+box-shadow: 20px 20px 40px #887;
+}
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+</style>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+      <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+
             @if (Route::has('login'))
-                <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="{{ url('/home') }}">WebSiteName</a>
+                        </div>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <ul class="nav navbar-nav navbar-right">
+                           <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                           <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                         </ul>
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
+          </nav>
     </body>
 </html>
