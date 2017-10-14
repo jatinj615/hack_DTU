@@ -25,4 +25,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function findRide(){
+      return view('find_ride');
+    }
+
+    public function offerRide(){
+      return view('offer_ride');
+    }
 }

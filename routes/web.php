@@ -22,3 +22,7 @@ Route::get('/chat', 'ChatController@chat');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/findRide', 'HomeController@findRide')->name('find_ride');
+
+Route::get('/offerRide', 'HomeController@offerRide')->name('offer_ride');

@@ -94,19 +94,19 @@ box-shadow: 20px 20px 40px #887;
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">WebSiteName</a>
+                <a class="navbar-brand" href="{{ route('home') }}">Home</a>
             </div>
 
                         @guest
                           <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                            <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                           </ul>
                         @else
 
                               <ul class="nav navbar-nav">
-                                 <li><a href="#">Find a ride </a></li>
-                                 <li><a href="#">Offer a ride</a></li>
+                                 <li><a href="{{ route('find_ride') }}">Find a ride </a></li>
+                                 <li><a href="{{ route('offer_ride') }}">Offer a ride</a></li>
                               </ul>
 
                               <ul class="nav navbar-nav navbar-right">

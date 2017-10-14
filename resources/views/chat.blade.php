@@ -14,14 +14,16 @@
 	</style>
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse" style="color:black;">
 		<div class="container-fluid">
 			<div class="navbar-header">
 					<a class="navbar-brand" href="#">WebSiteName</a>
 			</div>
 			<ul class="nav navbar-nav">
-				 <li><a href="#">Find a ride </a></li>
-				 <li><a href="#">Offer a ride</a></li>
+				<div class="btn-group" >
+				 <li><button class="btn "><a href="#">Find a ride </a></button></li>
+				 <li><button class="btn " ><a href="#">Offer a ride</a></button></li>
+			 </div>
 			</ul>
 		</div>
 	</nav>

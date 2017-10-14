@@ -97,6 +97,11 @@ box-shadow: 20px 20px 40px #887;
                     @auth
                         <div class="navbar-header">
                             <a class="navbar-brand" href="{{ url('/home') }}">WebSiteName</a>
+                            <ul class="nav navbar-nav">
+                               <li><a href="#">Find a ride </a></li>
+                               <li><a href="#">Offer a ride</a></li>
+                            </ul>
+                            
                         </div>
                     @else
                         <ul class="nav navbar-nav navbar-right">
