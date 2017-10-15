@@ -139,7 +139,7 @@ box-shadow: 20px 20px 40px #887;
 
     <!-- Scripts -->
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPaUzlKRaHBadwTNX5q2qsKwGs3lEMnDI&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPaUzlKRaHBadwTNX5q2qsKwGs3lEMnDI&callback=initAutocomplete&libraries=places">
     </script>
 </body>
 </html>
